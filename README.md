@@ -43,6 +43,53 @@ The following points describe the encoding process for the categorical  columns 
 * For ‘Vehicle Damage’ column; ‘Yes’ was labelled as 1 and ‘No; with 0.
 * Target Encoding was applied to ‘Region Code’ and ‘Policy Sales Channel’. 
 
-To remove class imbalance SMOTE was applied on the training dataset which is an oversampling technique. 
-
+To remove class imbalance **SMOTE** was applied on the training dataset which is an oversampling technique. 
 Modelling is performed on two datasets; the other being PCA applied; in case we face overfitting. 
+
+## DATA MODELLING
+
+Taking ROC - AUC as the measure of performance for our classification problem; four models were shortlisted which gave comparable and best results among the classifiers we had adopted.
+
+* LGBM Classifier - It is a boosting technique that uses tree based learning algorithm. It grows tree leaf wise rather than level wise.
+* CatBoost Classifier - It is also a boosting technique that uses tree based learning algorithm.
+* Stacked Classifier - CatBoost and LGBM are chosen as the base models for the Stacked Classifier which will combine the predictions from the base models.
+* Voting Classifier - The estimators to be used for voting include CatBoost and LGBM. Also since the number of classifiers is even; the voting is set to ‘soft’.
+
+## MODEL INTERPRETATION
+
+### MODEL INTERPRETATION USING SHAP
+* SHAP values  interpret the impact of having a certain value for a given feature in comparison to the prediction we'd make if that feature took some baseline value.
+* Shap suggests Previously_Insured and Vehicle_Damage are the most important features.
+
+### MODEL INTERPRETATION USING Eli5
+* Eli5 provides a way to compute feature importances for any estimator by measuring how score decreases when a feature is not available. Permutation Importance is taken as the estimator for calculating the weights.
+* Eli5 suggests Vehicle_Damage and Previously_Insured are the most important features.
+
+
+## CONCLUSION
+
+* We have established a model for our client’s classification problem wherein given a customer’s data, the model is able to predict whether he/she will be interested in buying Vehicle Insurance. The model was able to predict with a ROC score of 0.845 performance.
+* Model Interpretation also shows how each feature contributes to the Response. Both SHAP and Eli5 give similar results.
+
+
+## CHALLENGES FACED
+
+* The dataset contained a lot of categorical features out of which certain features had to be encoded in order to be used for modelling purpose.
+* We had to deal with Class Imbalance in our dataset where ‘Response’ labelled as ‘Yes’ was a minority class.
+
+
+## FUTURE SCOPE OF WORK
+
+
+* Weights assigned to the encoded columns namely ‘Region Code’ and ‘Policy Sales Channel’ can be better which would lead to better results.
+* Creating Application and Model Deployment.
+* Various Other Classifiers can be used for the classification problem.
+
+## Contributing Team Members:
+
+|Name     |  Email   | 
+|---------|-----------------|
+|Fahad Mehfooz |     fahad.mehfoooz@gmail.com     |
+|Ankit Kumar   |    ankitiitd221@gmail.com        |
+|Sanjog Mishra|    sanjogmishra1997@gmail.com    |
+|Varun Nayyar  |    nayyar.varun84@gmail.com      |
