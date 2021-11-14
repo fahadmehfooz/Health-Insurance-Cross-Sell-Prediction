@@ -19,6 +19,19 @@
 * Each column has all its entries of the same type as described by the column itself which means that there are no miscellaneous data in any column.
 * Now let us take a look at the description of the numerical columns which consist of ‘Age’ , ‘Annual Premium’ and ‘Vintage’.
 
+#### Univariate:
+![alt text](https://github.com/fahadmehfooz/Health-Insurance-Cross-Sell-Prediction/blob/main/images/Proportion%20of%20male%20Vs%20female.png)
+
+
+#### Bivariate:
+
+![alt text](https://github.com/fahadmehfooz/Health-Insurance-Cross-Sell-Prediction/blob/main/images/biariate.png)
+
+![alt text](https://github.com/fahadmehfooz/Health-Insurance-Cross-Sell-Prediction/blob/main/images/Age%20vs%20people%20buying%20and%20not%20buying%20insurance.png)
+
+![alt text](https://github.com/fahadmehfooz/Health-Insurance-Cross-Sell-Prediction/blob/main/images/Previously%20insured%20vs%20age.png)
+
+
 ##   DATA CLEANING
 *  On analyzing the numerical columns in our dataset namely ‘Age’, ‘Annual Premium’ and    ‘Vintage’ ; we observe that only Annual Premium consists of outliers.
 * Applying log transformation to ‘Annual Premium’ column handles the outliers and also in addition gives a normal distribution of the data.
@@ -54,6 +67,9 @@ Taking ROC - AUC as the measure of performance for our classification problem; f
 * CatBoost Classifier - It is also a boosting technique that uses tree based learning algorithm.
 * Stacked Classifier - CatBoost and LGBM are chosen as the base models for the Stacked Classifier which will combine the predictions from the base models.
 * Voting Classifier - The estimators to be used for voting include CatBoost and LGBM. Also since the number of classifiers is even; the voting is set to ‘soft’.
+
+![alt text](https://github.com/fahadmehfooz/Health-Insurance-Cross-Sell-Prediction/blob/main/images/ROC.png)
+
 
 ## MODEL INTERPRETATION
 
