@@ -24,3 +24,25 @@
 * Applying log transformation to ‘Annual Premium’ column handles the outliers and also in addition gives a normal distribution of the data.
 
 
+## TRAIN TEST SPLIT
+
+* After cleaning our data; the dataset is split into Train - Test datasets. This is done to ensure that our test dataset is completely isolated and there is no information leakage during the training process of  machine learning models.
+
+
+## DATA PREPROCESSING AND FEATURE ENGINEERING
+
+The following targets are to be achieved by this stage:
+* Encoding all categorical columns which cannot be used for modelling
+* Removing class imbalance from our dataset where ‘Response’  labelled as 1 is the minority class  
+
+
+The following points describe the encoding process for the categorical  columns of the dataset :
+
+* For ‘Gender’ column; ‘Male’ was labelled as 1 and ‘Female’ was labelled as 0.
+* One-Hot-Encoding was applied to ‘Vehicle Age’ column and three dummy columns were introduced into the dataset corresponding to ‘>2 years’, ‘1-2 years’ and ‘<1 year’.
+* For ‘Vehicle Damage’ column; ‘Yes’ was labelled as 1 and ‘No; with 0.
+* Target Encoding was applied to ‘Region Code’ and ‘Policy Sales Channel’. 
+
+To remove class imbalance SMOTE was applied on the training dataset which is an oversampling technique. 
+
+Modelling is performed on two datasets; the other being PCA applied; in case we face overfitting. 
