@@ -101,11 +101,4 @@ Taking ROC - AUC as the measure of performance for our classification problem; f
 * Creating Application and Model Deployment.
 * Various Other Classifiers can be used for the classification problem.
 
-## Contributing Team Members:
 
-|Name     |  Email   | 
-|---------|-----------------|
-|Fahad Mehfooz |     fahad.mehfoooz@gmail.com     |
-|Ankit Kumar   |    ankitiitd221@gmail.com        |
-|Sanjog Mishra|    sanjogmishra1997@gmail.com    |
-|Varun Nayyar  |    nayyar.varun84@gmail.com      |
